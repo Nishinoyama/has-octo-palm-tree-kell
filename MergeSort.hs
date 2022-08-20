@@ -8,5 +8,5 @@ mergeSort x = mergeSort left `merge` mergeSort right
         half = length x `div` 2
         merge x [] = x
         merge [] x = x
-        merge (x:xs) (y:ys) = if x < y then x : merge xs (y : ys)  else y : merge (x : xs) ys
+        merge (x:xs) (y:ys) = if x <= y then x : merge xs (y : ys)  else y : merge (x : xs) ys
 
